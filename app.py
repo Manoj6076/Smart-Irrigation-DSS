@@ -4,16 +4,10 @@ import numpy as np
 import joblib
 from pathlib import Path
 
-st.set_page_config(
-    page_title="Smart Irrigation DSS",
-    page_icon="🌱",
-    layout="wide"
-)
-
 BASE_DIR = Path(__file__).resolve().parent
 
-MODEL_PATH = BASE_DIR / "models" / "final_gradient_boosting_model.pkl"
-DATA_PATH = BASE_DIR / "data" / "cropdata_clean.csv"
+MODEL_PATH = BASE_DIR / "final_gradient_boosting_model.pkl"
+DATA_PATH = BASE_DIR / "cropdata_clean.csv"
 
 @st.cache_resource
 def load_model():
